@@ -1,4 +1,5 @@
 import { Input } from "@components/input";
+import { InfoItemList } from "@components/info-item-list";
 import "./header.scss";
 
 export function Header() {
@@ -6,6 +7,7 @@ export function Header() {
     <header>
       <h1>IP Address Tracker</h1>
       <Input />
+      <InfoItemList />
     </header>
   );
 }

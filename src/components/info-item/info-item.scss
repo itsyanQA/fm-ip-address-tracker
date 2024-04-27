@@ -1,0 +1,50 @@
+@use "../../styles/mixins" as *;
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  padding-inline-end: 60px;
+  min-height: 75px;
+  gap: 10px;
+
+  &:not(:last-child) {
+    border-inline-end: 1px solid rgba(0, 0, 0, 15%);
+
+    @include for-tablet-down {
+      border: none;
+    }
+  }
+
+  @include for-tablet-down {
+    padding: unset;
+    min-height: unset;
+    gap: 4px;
+  }
+
+  & h2 {
+    font-size: 12px;
+    letter-spacing: 1.75px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    opacity: 49.87%;
+
+    @include for-tablet-down {
+      text-align: center;
+      font-size: 10px;
+      letter-spacing: 1.46px;
+    }
+  }
+
+  & span {
+    font-size: 26px;
+    letter-spacing: -0.23px;
+    font-weight: 500;
+    line-height: 30px;
+
+    @include for-tablet-down {
+      font-size: 20px;
+      letter-spacing: -0.18px;
+    }
+  }
+}

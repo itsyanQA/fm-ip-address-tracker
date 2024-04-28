@@ -9,6 +9,7 @@
   box-shadow: 0 50px 50px -25px rgba(0, 0, 0, 9.84%);
   position: absolute;
   bottom: -67.5px;
+  animation: fade-in 250ms ease-out;
 
   @include for-tablet-down {
     flex-direction: column;

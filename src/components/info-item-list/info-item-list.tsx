@@ -11,13 +11,11 @@ export function InfoItemList() {
     { label: "isp", description: data?.isp },
   ];
 
-  if (data) {
-    return (
-      <ul className="info">
-        {items.map((item) => (
-          <InfoItem label={item.label} description={item.description} />
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul className="info">
+      {items.map((item, index) => (
+        <InfoItem label={item.label} description={item.description} key={index} />
+      ))}
+    </ul>
+  );
 }

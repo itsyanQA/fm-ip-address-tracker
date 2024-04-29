@@ -7,6 +7,7 @@ type SearchContextType = {
   data: IpifyResponse;
   isFetching: boolean;
   isError: boolean;
+  status: "fetching" | "error" | "success";
 };
 
 export const SearchContext = createContext<SearchContextType | null>(null);

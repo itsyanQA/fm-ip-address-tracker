@@ -4,6 +4,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  border-radius: 15px;
+
+  &--is-error {
+    outline: 2px solid rgb(209, 102, 102);
+    animation: shake 500ms linear;
+  }
 
   & input {
     width: 497px;

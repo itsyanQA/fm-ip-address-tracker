@@ -1,0 +1,29 @@
+.loader {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  position: relative;
+  animation: spin 1300ms infinite linear;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    background-color: #5262c5;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  &__circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: var(--white);
+  }
+}

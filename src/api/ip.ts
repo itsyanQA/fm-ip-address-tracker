@@ -11,7 +11,7 @@ export async function getIp(ipAddress: string = "") {
     throw new Error(`Error fetching ip: ${error}`);
   }
 
-  if (response) {
+  if (response.status === 200) {
     return response.json();
   }
 }

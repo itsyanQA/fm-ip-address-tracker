@@ -1,17 +1,19 @@
 import Arrow from "@assets/icon-arrow.svg?react";
 import "./input.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchQueryContext } from "src/store/context/use-search-context";
 
 export function Input() {
   const [searchValue, setSearchValue] = useState<string>("");
   const [isError, setIsError] = useState(false);
   const { setSearchedAddress } = useSearchQueryContext();
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const buttonHandler = () => {
     if (searchValue) {
       setIsError(false);
       setSearchedAddress(searchValue);
+      inputRef?.current?.blur();
     } else {
       setIsError(true);
     }
@@ -30,6 +32,7 @@ export function Input() {
         type="text"
         placeholder="Search for any IP address or domain"
         maxLength={100}
+        ref={inputRef}
       />
       <button onClick={buttonHandler}>{<Arrow />}</button>
     </div>

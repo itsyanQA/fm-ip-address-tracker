@@ -1,0 +1,36 @@
+@use "../../styles/mixins" as *;
+
+.map-placeholder {
+  height: calc(100vh - 280px);
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px dotted var(--black);
+    border-radius: 100%;
+    padding: 10px;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    animation: spin 15000ms infinite linear;
+  }
+
+  @include for-tablet-down {
+    height: calc(100vh - 300px);
+  }
+}

@@ -1,5 +1,5 @@
 import { Icon, LatLngExpression, PointExpression } from "leaflet";
-import { MapContainer, MapContainerProps, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, MapContainerProps, Marker, TileLayer } from "react-leaflet";
 import { useSearchQueryContext } from "src/store/context/use-search-context";
 import iconUrl from "@assets/location.svg";
 import "./map.scss";

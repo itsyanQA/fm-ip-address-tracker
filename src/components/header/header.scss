@@ -2,13 +2,15 @@
 
 header {
   height: 280px;
-  background-image: url("../../../public/assets/pattern-bg-desktop.png");
+  background: url("../../../public/assets/pattern-bg-desktop.png") no-repeat;
   display: flex;
   align-items: center;
   padding-block-start: 30px;
   flex-direction: column;
   gap: 35px;
   position: relative;
+  max-width: 1440px;
+  margin-inline: auto;
 
   &::before {
     content: "";
@@ -18,12 +20,20 @@ header {
     height: 100%;
     z-index: -1;
     top: 0;
+
+    @include for-tablet-down {
+      background-image: linear-gradient(to right, #453e99, #4b4dac);
+    }
   }
 
   @include for-tablet-down {
     gap: 25px;
     padding-inline: 24px;
     height: 300px;
+  }
+
+  @media (max-width: 375px) {
+    background-image: url("../../../public/assets/pattern-bg-mobile.png");
   }
 
   & h1 {

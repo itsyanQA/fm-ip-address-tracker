@@ -1,4 +1,4 @@
-const BASE_URL = "https://geo.ipify.org/api/v2/country";
+const BASE_URL = "https://geo.ipify.org/api/v2/country,city";
 const API_KEY = "at_T3lxZmiPUvFVpYT3RGGTWkCP1av7n";
 
 export async function getIp(ipAddress: string = "") {

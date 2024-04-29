@@ -10,6 +10,11 @@ type Location = {
   country: string;
   region: string;
   timezone: string;
+  lat: number;
+  lng: number;
+  postalCode: string;
+  geonameId: number;
+  city: string;
 };
 
 export type IpifyResponse = {

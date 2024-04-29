@@ -4,14 +4,16 @@ import { Error } from "@components/error";
 import { InfoItemList } from "@components/info-item-list";
 import { useSearchQueryContext } from "src/store/context/use-search-context";
 import { Loader } from "@components/loader";
+import { ApiStatus } from "@customTypes/types";
 
 export function Header() {
   const { status } = useSearchQueryContext();
 
-  const content: Record<"fetching" | "error" | "success", JSX.Element> = {
+  const content: Record<ApiStatus, JSX.Element | null> = {
     fetching: <Loader />,
     success: <InfoItemList />,
     error: <Error />,
+    idle: null,
   };
 
   return (

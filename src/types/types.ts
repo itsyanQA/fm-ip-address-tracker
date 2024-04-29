@@ -17,6 +17,8 @@ type Location = {
   city: string;
 };
 
+export type ApiStatus = "fetching" | "error" | "success" | "idle";
+
 export type IpifyResponse = {
   ip: string;
   isp: string;

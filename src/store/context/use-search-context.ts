@@ -1,4 +1,4 @@
-import { IpifyResponse } from "@customTypes/types";
+import { ApiStatus, IpifyResponse } from "@customTypes/types";
 import { Dispatch, SetStateAction, createContext, useContext } from "react";
 
 type SearchContextType = {
@@ -7,7 +7,7 @@ type SearchContextType = {
   data: IpifyResponse;
   isFetching: boolean;
   isError: boolean;
-  status: "fetching" | "error" | "success";
+  status: ApiStatus;
 };
 
 export const SearchContext = createContext<SearchContextType | null>(null);

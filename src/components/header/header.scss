@@ -2,29 +2,14 @@
 
 header {
   height: 280px;
-  background: url("../../../public/assets/pattern-bg-desktop.png") no-repeat;
+  background: url("../../../public/assets/pattern-bg-desktop.png") no-repeat center/cover;
   display: flex;
   align-items: center;
   padding-block-start: 30px;
   flex-direction: column;
   gap: 35px;
   position: relative;
-  max-width: 1440px;
   margin-inline: auto;
-
-  &::before {
-    content: "";
-    background-image: linear-gradient(to right, #453e99, #4b4dac, #5262c5, #5873da, #5f85f1);
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-    top: 0;
-
-    @include for-tablet-down {
-      background-image: linear-gradient(to right, #453e99, #4b4dac);
-    }
-  }
 
   @include for-tablet-down {
     gap: 25px;
